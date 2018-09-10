@@ -10,7 +10,17 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Window4
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowFrame_Mat
+    second: {fileID: 2100000, guid: f0856bac3d9eb3e439b214a01bb31ee7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window_Mat
+    second: {fileID: 2100000, guid: 69d662954e886d6458875c56f5131cd2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

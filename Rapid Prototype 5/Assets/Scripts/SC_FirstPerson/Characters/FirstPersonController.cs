@@ -28,12 +28,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
-
-        //V code
-        private bool inRangeFocus;
-        private GameObject focusCollided;
-
+        
         private Camera m_Camera;
+        public GameObject water;
         private bool m_Jump;
         private float m_YRotation;
         private Vector2 m_Input;
@@ -47,6 +44,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        public Color fogColorVal = new Color(0.17f, 0.22f, 0.43f, 1.0f);
+        public float fogDensity = 0.5f;
+        public float fogEnd = 20.0f;
 
         // Use this for initialization
         private void Start()
@@ -61,13 +61,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
-            inRangeFocus = false;
         }
 
 
         // Update is called once per frame
-        private void Update()
+        void Update()
         {
+            if (m_Camera.transform.position.y < water.transform.position.y)
+            {
+                RenderSettings.fogColor = new Color(fogColorVal.r, fogColorVal.g, fogColorVal.b, fogColorVal.a);
+                RenderSettings.fogDensity = fogDensity;
+                RenderSettings.fogEndDistance = fogEnd;
+                RenderSettings.fog = true;
+            }
+            else
+            {
+                RenderSettings.fog = false;
+            }
+
             RotateView();
 
             if (EventSystem.current.IsPointerOverGameObject())
@@ -264,17 +275,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         void OnTriggerEnter(Collider hit)
         {
-            if(hit.tag == "Interactable")
-            {
-                inRangeFocus = true;
-                focusCollided = hit.gameObject;
-            }
+
         }
 
         void OnTriggerExit(Collider hit)
         {
-            inRangeFocus = false;
-            //focusCollided = null;
+
         }
     }
 }

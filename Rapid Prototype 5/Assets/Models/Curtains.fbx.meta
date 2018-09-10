@@ -3,13 +3,11 @@ guid: 0d9965d9e5b91fb41ac3732d37753f12
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Curtains
-    100002: //RootNode
-    400000: Curtains
-    400002: //RootNode
+    100000: //RootNode
+    400000: //RootNode
     2100000: Curtains_Mat
-    2300000: Curtains
-    3300000: Curtains
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Curtains
   externalObjects: {}
   materials:
