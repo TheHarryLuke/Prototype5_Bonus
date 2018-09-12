@@ -17,7 +17,12 @@ ModelImporter:
     7400006: MiniGate_IsClosed
     9500000: //RootNode
     13700000: MiniGate
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: efca458ceac98fa4d9b1f0b7bbffecec, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
