@@ -12,6 +12,7 @@ public class Float : MonoBehaviour {
     private Vector3 m_ActionPoint;
     private Vector3 m_UpLift;
     private Rigidbody rb;
+    private bool m_bDeleted = false;
 
     void Start()
     {
@@ -24,10 +25,16 @@ public class Float : MonoBehaviour {
         m_ActionPoint = transform.position + transform.TransformDirection(m_BouyancyCentreOffset);
         m_ForceFactor = 1f - ((m_ActionPoint.y - WaterLevel.m_WaterLevel) / m_FloatHeight);
 
-        if(m_ForceFactor > 0.0f)
+        if(m_ForceFactor > 0.0f && WaterLevel.m_WaterLevel > transform.position.y + m_FloatHeight)
         {
             m_UpLift = -Physics.gravity * (m_ForceFactor - rb.velocity.y * m_BounceDamp);
             rb.AddForceAtPosition(m_UpLift, m_ActionPoint);
+        }
+
+        if("DeleteParticleWater" == this.tag && WaterLevel.m_WaterLevel > transform.position.y + m_FloatHeight && !m_bDeleted)
+        {
+            Destroy(gameObject.GetComponentInChildren<ParticleSystem>().gameObject);
+            m_bDeleted = true;
         }
     }
 }

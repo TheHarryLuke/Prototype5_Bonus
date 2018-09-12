@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickupObject : MonoBehaviour {
-
 	public enum EPickups
     {
         YellowKey,
         BlueKey,
-        GreenKey
+        GreenKey,
     }
 
-    public EPickups pickupType;
+    [System.Serializable]
+    public struct EPickUpStats
+    {
+        public EPickups pickupType;
+        public bool unlocksDoor1;
+    }
+
+    //public EPickups pickupType;
+    public EPickUpStats pickUpObject;
+
+    
 }

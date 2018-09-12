@@ -53,17 +53,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\PlayerUpLadder.cs" />
      <Compile Include="Assets\Scripts\BGM.cs" />
+     <Compile Include="Assets\Scripts\BookManager.cs" />
+     <Compile Include="Assets\Scripts\EelMovement.cs" />
+     <Compile Include="Assets\Scripts\EventManager.cs" />
      <Compile Include="Assets\Scripts\Float.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\LockManager.cs" />
+     <Compile Include="Assets\Scripts\MenuScreenScript.cs" />
      <Compile Include="Assets\Scripts\PickupObject.cs" />
      <Compile Include="Assets\Scripts\RayCasting.cs" />
      <Compile Include="Assets\Scripts\SC_FirstPerson\Characters\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\SC_FirstPerson\Characters\HeadBob.cs" />
      <Compile Include="Assets\Scripts\SC_FirstPerson\Characters\MouseLook.cs" />
      <Compile Include="Assets\Scripts\SC_FirstPerson\Characters\RigidbodyFirstPersonController.cs" />
+     <Compile Include="Assets\Scripts\SC_FirstPerson\DragRigidbody.cs" />
      <Compile Include="Assets\Scripts\SC_FirstPerson\Utility\ActivateTrigger.cs" />
      <Compile Include="Assets\Scripts\SC_FirstPerson\Utility\AlphaButtonClickMask.cs" />
      <Compile Include="Assets\Scripts\SC_FirstPerson\Utility\AutoMobileShaderSwitch.cs" />
@@ -88,7 +94,12 @@
      <Compile Include="Assets\Scripts\SC_FirstPerson\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\Scripts\SC_FirstPerson\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Scripts\SC_FirstPerson\Utility\WaypointProgressTracker.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\ScreenShake.cs" />
+     <Compile Include="Assets\Scripts\SetAtWaterHeight.cs" />
+     <Compile Include="Assets\Scripts\SpawnMore.cs" />
      <Compile Include="Assets\Scripts\WaterLevel.cs" />
+     <Compile Include="Assets\Scripts\WaterShrinkage.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

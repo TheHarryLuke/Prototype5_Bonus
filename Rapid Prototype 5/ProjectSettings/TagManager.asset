@@ -6,6 +6,15 @@ TagManager:
   tags:
   - Pickup
   - Lock
+  - SpawnMore
+  - DeleteParticleWater
+  - ScreenShaker
+  - Ladder
+  - EEL
+  - StaticBullet
+  - Book
+  - Pickable
+  - Eel
   layers:
   - Default
   - TransparentFX
@@ -16,8 +25,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Player
+  - Eel
   - 
   - 
   - 

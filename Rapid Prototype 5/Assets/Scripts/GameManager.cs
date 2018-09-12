@@ -50,8 +50,19 @@ public class GameManager : MonoBehaviour {
         return m_gameIsPaused;
     }
 
-    static public void GameOver(bool _bEscaped)
+    static public void GameFinishedSetEnd(bool _bEscaped)
     {
-        SceneManager.LoadScene("EndScreen");
+        if(_bEscaped)
+        {
+            //Load win Screen where player escapes
+            //SceneManager.LoadScene("WinScreen");
+
+        }
+        else
+        {
+            //Load lose screen where player drowns before they can escape
+            //SceneManager.LoadScene("LoseScreen");
+        }
+        //SceneManager.LoadScene("EndScreen");
     }
 }

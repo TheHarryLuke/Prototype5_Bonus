@@ -53,6 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Standard Assets\DecalSystem\Plugins\DecalSystem\Decal.cs" />
+     <Compile Include="Assets\Standard Assets\DecalSystem\Plugins\DecalSystem\Utils\DecalBuilder.cs" />
+     <Compile Include="Assets\Standard Assets\DecalSystem\Plugins\DecalSystem\Utils\DecalUtils.cs" />
+     <Compile Include="Assets\Standard Assets\DecalSystem\Plugins\DecalSystem\Utils\MeshBuilder.cs" />
+     <Compile Include="Assets\Standard Assets\DecalSystem\Plugins\DecalSystem\Utils\PolygonClippingUtils.cs" />
      <Compile Include="Assets\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
      <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\Displace.cs" />
      <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
